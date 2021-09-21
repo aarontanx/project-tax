@@ -1,26 +1,38 @@
 <template>
-    <div class="container">
+    <div>
+    <!-- <div class="container"> -->
         <!-- <h1> Malaysia Tax Rate </h1> -->
-        <TaxDescription />
-        <Calculator />
-        MYR {{ $store.getters.finalValue }}
+        
+        <div class='container1'> <TaxDescription /> </div>
+        <div class='container2'>
+        <Form />
+        <Summary />
+        <Final />
+        </div>
     </div>
+
+
 </template>
 
 <script>
 import TaxDescription from './TaxDescription'
-import Calculator from './Calculator.vue'
+import Form from './Form.vue'
+import Summary from './Summary.vue'
+import Final from './Final.vue'
 
 
 export default {
     components: {
         TaxDescription,
-        Calculator
+        Form,
+        Summary,
+        Final
     }
-
 }
 </script>
 
 <style scoped>
-
+    .container1 .container2 {
+        display: flex;
+    }
 </style>

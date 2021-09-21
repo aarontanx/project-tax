@@ -6,10 +6,10 @@
             <th> SST Rate </th>
             <th> Import Duty </th>
         </thead>
-        <tbody :key='product' v-for="(tax, product) in $store.state.taxRate" class="active-row"> 
-            <td> {{ product }} </td>
-            <td> {{ tax[0]*100 }} % </td>
-            <td> {{ tax[1]*100 }} % </td>
+        <tbody :key='category' v-for="category in Object.keys($store.state.taxRate)" class="active-row">
+            <td> {{ category }} </td>
+            <td> {{ $store.state.taxRate[category][0]*100 }} % </td>
+            <td> {{ $store.state.taxRate[category][1]*100 }} % </td>
         </tbody>
     </table>
 </template>
