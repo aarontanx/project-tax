@@ -58,7 +58,7 @@ export default createStore({
       'itemLclValue': 0.00,
       'finalValue':0.00,
 
-      'categorySelected' : null,
+      'categorySelected' : 'None',
 
       'sstRate' : 0.0,
       'importDutyRate' : 0.0,

@@ -1,5 +1,8 @@
 <template>
+            
     <div class='result'>
+    <Summary />
+    <br>
         <h3> Estimated Cost </h3>
         <br>
         <b>SST Value: </b> MYR {{ $store.state.LclSSTValue}}
@@ -11,8 +14,13 @@
 </template>
 
 <script>
+import Summary from './Summary.vue'
+
 export default {
     name: 'Final',
+    components: {
+        Summary
+    }
 }
 </script>
 
