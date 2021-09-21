@@ -1,17 +1,17 @@
 <template>
         <div> 
             <br>
-            Category Selected: {{ $store.state.categorySelected }}
+            <b> Category Selected: </b> {{ $store.state.categorySelected }}
             <br>
-            SST Rate: {{ $store.state.sstRate*100 }} %
+            <b> SST Rate: </b> {{ $store.state.sstRate*100 }} %
             <br>
-            Import Duty Rate: {{ $store.state.importDutyRate*100 }} %
+            <b> Import Duty Rate: </b> {{ $store.state.importDutyRate*100 }} %
             <br>
-            Currency Selected: {{ $store.state.currencySelected }}
+            <b> Currency Selected: </b> {{ $store.state.currencySelected }}
             <br>
-            Exchange Rate: {{ $store.state.exchangeRate }}
+            <b> Exchange Rate: </b> {{ $store.state.exchangeRate }}
             <br>
-            Local MYR Value: {{ $store.state.itemLclValue }}
+            <b> Local MYR Value: </b> {{ $store.state.itemLclValue }}
     </div>
 </template>
 
