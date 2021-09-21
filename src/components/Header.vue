@@ -11,12 +11,9 @@ export default {
 </script>
 
 <style scoped>
+    @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@1,500&display=swap');
     h1 {
-        /* background-color: rgb(235, 247, 247); */
         text-align: left ;
-        /* margin: 50 px ; */
-        /* padding: auto; */
-        /* min-height: 100%; */
-        height: 15vh;
+        font-family: 'Ubuntu', sans-serif;
     }
 </style>

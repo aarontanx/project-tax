@@ -15,7 +15,6 @@
 </template>
 
 <script>
-//cdn.datatables.net/1.11.2/css/jquery.dataTables.min.css
 
 export default {
     name: 'TaxDescription',
@@ -35,6 +34,11 @@ export default {
     /* min-width: 400px; */
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
     /* align-content: center; */
+    float: left;
+}
+
+h3 {
+    text-align: left;
 }
 
 .styled-table th,
