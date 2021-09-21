@@ -88,11 +88,11 @@ export default createStore({
       setItemValue(state, itemValue) {
         state.itemLclValue = (this.state.exchangeRate * itemValue).toFixed(2)
       },
-      setLclSSTValue(state, itemValue) {
-        state.LclSSTValue = (this.state.sstRate * itemValue).toFixed(2)
+      setLclSSTValue(state) {
+        state.LclSSTValue = (this.state.sstRate * this.state.itemLclValue).toFixed(2)
       },
-      setLclDutyValue(state, itemValue) {
-        state.LclDutyValue = (this.state.importDutyRate * itemValue).toFixed(2)
+      setLclDutyValue(state) {
+        state.LclDutyValue = (this.state.importDutyRate * this.state.itemLclValue).toFixed(2)
       },
       calculateFinalValue(state){
         state.finalValue = (Number(this.state.itemLclValue) + Number(this.state.LclSSTValue) + Number(this.state.LclDutyValue)).toFixed(2)
