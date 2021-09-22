@@ -87,7 +87,6 @@ export default createStore({
         state.LclSSTValue = (state.sstRate * state.itemLclValue).toFixed(2)
         state.LclDutyValue = (state.importDutyRate * state.itemLclValue).toFixed(2)
         state.finalValue = (Number(state.itemLclValue) + Number(state.LclSSTValue) + Number(state.LclDutyValue)).toFixed(2)
-        console.log('happening here')
       },
   },
   actions: {

@@ -5,11 +5,11 @@
     <br>
         <h3> Estimated Cost </h3>
         <br>
-        <b>SST Value: </b> MYR {{ Number($store.state.LclSSTValue).toLocaleString() }}
+        <b>SST Value: </b> MYR {{ Number($store.state.LclSSTValue).toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2}) }}
         <br>
-        <b>Import Duty Value: </b> MYR {{ Number($store.state.LclDutyValue).toLocaleString()}}
+        <b>Import Duty Value: </b> MYR {{ Number($store.state.LclDutyValue).toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2}) }}
         <br>
-        <b>Final Estimated Price: </b> MYR {{ Number($store.state.finalValue).toLocaleString() }}
+        <b>Final Estimated Price: </b> MYR {{ Number($store.state.finalValue).toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2}) }}
     </div>
 </template>
 
