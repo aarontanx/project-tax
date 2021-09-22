@@ -48,7 +48,6 @@ export default {
     computed: {
         setCategory: {
             get () {
-                // return this.$store.state.categorySelected
             },
             set (value) {
                 this.$store.commit('setCategory', value)
@@ -56,7 +55,6 @@ export default {
         },
         setCurrency: {
             get () {
-                // return this.$store.state.currencySelected
             },
             set (value) {
                 this.$store.commit('setCurrency', value)
@@ -64,10 +62,8 @@ export default {
         },
         setItemValue: {
             get () {
-                // return this.$store.state.itemValue
             },
             set (value) {
-                // console.log(value)
                 this.$store.commit('setItemValue', value)
             },
         },

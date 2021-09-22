@@ -67,10 +67,6 @@ export default createStore({
       'LclDutyValue': 0.00,
   },
   mutations: {
-    // setCurrency(state, currencySelected) {
-    //   state.currencySelected = currencySelected
-    //   console.log(currencySelected)
-    // }
       setCategory(state, categorySelected) {
         state.categorySelected = categorySelected
         state.sstRate = state.taxRate[categorySelected][0]
@@ -97,8 +93,5 @@ export default createStore({
   actions: {
   },
   getters: {
-    // categorySelected(state) {
-    //     return state.categorySelected
-    // }
     },
 })
