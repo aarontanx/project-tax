@@ -2,8 +2,8 @@
     <div class='container'>
         <div class='center'>
             <p> Source Country: </p>
-            <select class="select-css" v-model="srcCty">
-                <option v-for="src_cty in $store.state.src_cty" :key='src_cty' :value="src_cty">
+            <select class="select-css" v-model="setSrcCty">
+                <option v-for="src_cty in $store.state.src_cty_choice.sort()" :key='src_cty' :value="src_cty" selected>
                     {{ src_cty }}
                 </option>
             </select>
@@ -11,8 +11,8 @@
 
         <div class='center'>
             <p> Destination Country: </p>
-            <select class="select-css" v-model="dstCty">
-                <option v-for="dst_cty in $store.state.dst_cty" :key='dst_cty' :value="dst_cty">
+            <select class="select-css" v-model="setDstCty">
+                <option v-for="dst_cty in $store.state.dst_cty_choice.sort()" :key='dst_cty' :value="dst_cty">
                     {{ dst_cty }}
                 </option>
             </select> 
@@ -21,7 +21,7 @@
         <div class='center'>
             <p> Item Category </p>
             <select class="select-css" v-model="setCategory">
-                <option v-for="category in Object.keys($store.state.taxRate)" :key='category' :value='category'>
+                <option v-for="category in Object.keys($store.state.taxRate).sort()" :key='category' :value='category'>
                     {{ category }}
                 </option> 
             </select>
@@ -30,7 +30,7 @@
         <div class='center'>
             <p> Item Value </p>
             <select class="select-css spacing" v-model="setCurrency">
-                <option v-for="currency in Object.keys($store.state.currency)" :key='currency' :value="currency">
+                <option v-for="currency in Object.keys($store.state.currency).sort()" :key='currency' :value="currency">
                     {{ currency }}
                 </option>
             </select>
@@ -65,6 +65,20 @@ export default {
             },
             set (value) {
                 this.$store.commit('setItemValue', value)
+            },
+        },
+        setSrcCty: {
+            get () {
+            },
+            set (value) {
+                this.$store.commit('setSrcCty', value)
+            },
+        },
+        setDstCty: {
+            get () {
+            },
+            set (value) {
+                this.$store.commit('setDstCty', value)
             },
         },
     },
