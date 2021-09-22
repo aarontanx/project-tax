@@ -1,41 +1,43 @@
 <template>
-    <!-- <div class='container'> -->
-    <div class='center'>
-        <p> Source Country: </p>
-        <!-- <br> -->
-        <select class="select-css" v-model="citySelected">
-            <option v-for="src_cty in $store.state.src_cty" :key='src_cty' :value="src_cty">
-                {{ src_cty }}
-            </option>
-        </select>
-    </div>
-<br>
-    <div class='center'>
-        <p> Destination Country: </p>
-        <select class="select-css" v-model="dst_cty">
-            <option v-for="dst_cty in $store.state.dst_cty" :key='dst_cty' :value="dst_cty">
-                {{ dst_cty }}
-            </option>
-        </select> 
-    </div>
-    
-    <div class='center'>
-        <p> Item Category </p>
-        <select class="select-css" v-model="productCat">
-            <option v-for="category in Object.keys($store.state.taxRate)" :key='category' :value="category" >
-                {{ category }}
-            </option>
-        </select>
-    </div>
+    <div class='container'>
+        <div class='center'>
+            <p> Source Country: </p>
+            <select class="select-css" v-model="srcCty">
+                <option v-for="src_cty in $store.state.src_cty" :key='src_cty' :value="src_cty">
+                    {{ src_cty }}
+                </option>
+            </select>
+        </div>
 
-    <div class='center'>
-        <p> Item Value </p>
-        <select class="select-css spacing" v-model="currencyCat">
-            <option v-for="currency in Object.keys($store.state.currency)" :key='currency' :value="currency">
-                {{ currency }}
-            </option>
-        </select>
-        <input style="margin: 10px" v-model='itemValue' type="number" placeholder="Item Value" />
+        <div class='center'>
+            <p> Destination Country: </p>
+            <select class="select-css" v-model="dstCty">
+                <option v-for="dst_cty in $store.state.dst_cty" :key='dst_cty' :value="dst_cty">
+                    {{ dst_cty }}
+                </option>
+            </select> 
+        </div>
+    <br>
+        <div class='center'>
+            <p> Item Category </p>
+            <select class="select-css" v-model="setCategory">
+                <option v-for="category in Object.keys($store.state.taxRate)" :key='category' :value='category'>
+                    {{ category }}
+                </option> 
+            </select>
+        </div>
+
+        <div class='center'>
+            <p> Item Value </p>
+            <select class="select-css spacing" v-model="setCurrency">
+                <option v-for="currency in Object.keys($store.state.currency)" :key='currency' :value="currency">
+                    {{ currency }}
+                </option>
+            </select>
+        </div>
+        <div>
+            <input style="margin: 10px" v-model="setItemValue" type="number" placeholder="Item Value" />
+        </div>
     </div>
 </template>
 
@@ -43,37 +45,33 @@
 
 export default {
     name: 'Calculator',
-
     computed: {
-        productCat: {
+        setCategory: {
             get () {
-                return this.$store.state.categorySelected
+                // return this.$store.state.categorySelected
             },
             set (value) {
                 this.$store.commit('setCategory', value)
             },
         },
-        currencyCat: {
+        setCurrency: {
             get () {
-                return this.$store.state.currencySelected
+                // return this.$store.state.currencySelected
             },
             set (value) {
                 this.$store.commit('setCurrency', value)
             },
         },
-        itemValue: {
+        setItemValue: {
             get () {
-                return this.$store.state.itemValue
+                // return this.$store.state.itemValue
             },
             set (value) {
                 // console.log(value)
                 this.$store.commit('setItemValue', value)
-                this.$store.commit('setLclSSTValue', value)
-                this.$store.commit('setLclDutyValue', value)
-                this.$store.commit('calculateFinalValue')
             },
-        }
-    }
+        },
+    },
 }
 </script>
 

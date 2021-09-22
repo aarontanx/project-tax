@@ -49,13 +49,10 @@ export default createStore({
       'PKR' : 0.024754,
       'NPR' : 0.035509,
       'EGP' : 0.2664,
-
-        
-
     },
 
       'currencySelected': 'MYR',
-      'itemValue': 0.00,
+      'itemValue': null,
       'itemLclValue': 0.00,
       'finalValue':0.00,
 
@@ -75,42 +72,33 @@ export default createStore({
     //   console.log(currencySelected)
     // }
       setCategory(state, categorySelected) {
-      state.categorySelected = categorySelected
-      // console.log(categorySelected)
-      // console.log(this.state.taxRate[categorySelected])
-      state.sstRate = this.state.taxRate[categorySelected][0]
-      state.importDutyRate = this.state.taxRate[categorySelected][1]
+        state.categorySelected = categorySelected
+        state.sstRate = state.taxRate[categorySelected][0]
+        state.importDutyRate = state.taxRate[categorySelected][1]
+        this.commit('updateAllValue')
       },
       setCurrency(state, currencySelected) {
-        state.currencySelected = currencySelected
-        state.exchangeRate = this.state.currency[currencySelected]
+        state.exchangeRate = state.currency[currencySelected]
+        this.commit('updateAllValue')
         },
       setItemValue(state, itemValue) {
-        state.itemLclValue = (this.state.exchangeRate * itemValue).toFixed(2)
+        state.itemValue = itemValue
+        state.itemLclValue = (state.exchangeRate * itemValue).toFixed(2)
+        this.commit('updateAllValue')
       },
-      setLclSSTValue(state) {
-        state.LclSSTValue = (this.state.sstRate * this.state.itemLclValue).toFixed(2)
+      updateAllValue(state) {
+        state.itemLclValue = (state.exchangeRate * state.itemValue).toFixed(2)
+        state.LclSSTValue = (state.sstRate * state.itemLclValue).toFixed(2)
+        state.LclDutyValue = (state.importDutyRate * state.itemLclValue).toFixed(2)
+        state.finalValue = (Number(state.itemLclValue) + Number(state.LclSSTValue) + Number(state.LclDutyValue)).toFixed(2)
+        console.log('happening here')
       },
-      setLclDutyValue(state) {
-        state.LclDutyValue = (this.state.importDutyRate * this.state.itemLclValue).toFixed(2)
-      },
-      calculateFinalValue(state){
-        state.finalValue = (Number(this.state.itemLclValue) + Number(this.state.LclSSTValue) + Number(this.state.LclDutyValue)).toFixed(2)
-        // console.log(typeof this.state.itemLclValue)
-        // + this.state.LclDutyValue
-      }
   },
   actions: {
-    // setCurrency(selectCurrency, currencySelected) => {
-    //   selectCurrency.commit(setCurrency, )
-    // }
   },
   getters: {
-    // finalValue(state) {
-    //   // this.finalValue = 1
-    //   return state.exchangeRate * state.itemValue
+    // categorySelected(state) {
+    //     return state.categorySelected
     // }
-  },
-  modules: {
-  }
+    },
 })

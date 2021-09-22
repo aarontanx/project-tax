@@ -11,7 +11,7 @@
             <br>
             <b> Exchange Rate: </b> {{ $store.state.exchangeRate }}
             <br>
-            <b> Local MYR Value: </b> {{ $store.state.itemLclValue }}
+            <b> Local MYR Value: </b> {{ Number($store.state.itemLclValue).toLocaleString() }}
     </div>
 </template>
 
