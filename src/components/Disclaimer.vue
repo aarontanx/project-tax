@@ -18,7 +18,7 @@ export default {
         border-top: 1px solid  rgb(165, 130, 99);
         font-size: smaller;
         /* margin: 5%; */
-        padding-bottom: 1%;
+        padding-bottom: 2%;
         background-color:palegoldenrod;
     }
 </style>
