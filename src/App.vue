@@ -1,12 +1,11 @@
 <template >
 <div class="fullscreen">
   <div class='background'><Header /></div>
-    <div class='container__sidebar'> <TaxDescription /> </div>
-
-    <div class="container">
+  <body class="body">
+    <div> <TaxDescription /> </div>
     <div class='container__main'> <Form /></div>
     <div class='container__main'> <Final /></div>
-  </div>
+  </body>
   <div> <Disclaimer /> </div>
 </div>
 </template>
@@ -45,6 +44,8 @@ export default {
 .background {
   /* margin: 1%; */
   padding-top: 1%;
+  padding-bottom: 1%;
+  border-bottom: 1px solid rgb(165, 130, 99);
   background: linear-gradient(to bottom, #455EB5 10%, #ffffff 100%);
   /* position: relative; */
   /* height: auto; */
@@ -66,8 +67,9 @@ export default {
     border: 1px;
     border-color: black;
 }
-.container__sidebar {
-    /* width: 30%; */
+
+body {
+  background-color: rgb(224, 224, 223);
 }
 
 .container__main {

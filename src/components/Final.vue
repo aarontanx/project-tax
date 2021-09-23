@@ -33,7 +33,7 @@ export default {
     margin: 30px auto;
     overflow: auto;
     min-height: 30px;
-    border: 1px solid steelblue;
+    border: 1px solid  rgb(165, 130, 99);
     /* padding-top: -10%; */
     /* margin-top: -5; */
     border-radius: 30px;

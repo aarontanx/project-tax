@@ -15,7 +15,7 @@ export default {
     .box {
         border-radius: 1px;
         border-color: cadetblue;
-        border: 1px solid steelblue;
+        border-top: 1px solid  rgb(165, 130, 99);
         font-size: smaller;
         /* margin: 5%; */
         padding-bottom: 1%;
