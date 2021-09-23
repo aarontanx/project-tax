@@ -37,10 +37,11 @@ export default {
     /* padding: 30px; */
     border-radius: 30px;
     /* background-color: lightblue; */
+    background-color: #ddd; 
     }
 
-body {
-    background-color: #ddd; 
+/* body {
+    background-color: #ddd;  
     margin: 3rem;
     border-radius: 30px;}
 
@@ -57,7 +58,7 @@ body {
 #tv:hover {
   border-radius: 0% 0% 50% 50% / 0% 0% 5% 5% ;
   box-shadow: 10px 10px rgba(0,0,0,.25);
-}
+} */
 
 h3 {
     margin-bottom: -1%;

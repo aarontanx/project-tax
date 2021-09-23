@@ -1,12 +1,13 @@
 <template >
 <div class="fullscreen">
-<div class='background'><Header /></div>
-<div class='container__sidebar'> <TaxDescription /> </div>
+  <div class='background'><Header /></div>
+    <div class='container__sidebar'> <TaxDescription /> </div>
 
-<div class="container">
-<div class='container__main'> <Form /></div>
-<div class='container__main'> <Final /></div>
-</div>
+    <div class="container">
+    <div class='container__main'> <Form /></div>
+    <div class='container__main'> <Final /></div>
+  </div>
+  <div> <Disclaimer /> </div>
 </div>
 </template>
 
@@ -16,6 +17,7 @@ import TaxDescription from './components/TaxDescription'
 import Form from './components/Form.vue'
 import Header from './components/Header.vue'
 import Final from './components/Final.vue'
+import Disclaimer from './components/Disclaimer.vue'
 
 
 export default {
@@ -23,7 +25,8 @@ export default {
     Form,
     Header,
     TaxDescription,
-    Final
+    Final,
+    Disclaimer
     }
 }
 </script>
