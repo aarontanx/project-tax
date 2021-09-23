@@ -1,5 +1,5 @@
 <template>
-            
+<body>
     <div class='result'>
     <Summary />
     <br>
@@ -11,6 +11,7 @@
         <br>
         <b>Final Estimated Price: </b> MYR {{ Number($store.state.finalValue).toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2}) }}
     </div>
+</body>
 </template>
 
 <script>
@@ -37,4 +38,28 @@ export default {
     border-radius: 30px;
     /* background-color: lightblue; */
     }
+
+body {
+    background-color: #ddd; 
+    margin: 3rem;
+    border-radius: 30px;}
+
+#tv {
+  position: relative;
+  width: 350px;
+  height: 550px;
+  background: white;
+  border-radius: 0% 0% 0% 0% / 0% 0% 0% 0% ;
+  color: white;
+  box-shadow: 20px 20px rgba(0,0,0,.15);
+  transition: all .4s ease;
+}
+#tv:hover {
+  border-radius: 0% 0% 50% 50% / 0% 0% 5% 5% ;
+  box-shadow: 10px 10px rgba(0,0,0,.25);
+}
+
+h3 {
+    margin-bottom: -1%;
+}
 </style>

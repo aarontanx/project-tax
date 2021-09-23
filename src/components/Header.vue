@@ -1,5 +1,5 @@
 <template>
-    <h1> Malaysia Tax Rate </h1>
+    <h1> Malaysia Import Custom Tax Rate </h1>
 </template>
 
 <script>

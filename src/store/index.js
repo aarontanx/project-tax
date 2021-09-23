@@ -71,6 +71,8 @@ export default createStore({
 
       'threshold' : 500,
       'aboveThreshold': false,
+
+      'hideTable' : false,
   },
   mutations: {
       setSrcCty(state, srcCtySelected) {
@@ -88,6 +90,7 @@ export default createStore({
         this.commit('updateAllValue')
       },
       setCurrency(state, currencySelected) {
+        state.currencySelected = currencySelected
         state.exchangeRate = state.currency[currencySelected]
         this.commit('updateAllValue')
         },

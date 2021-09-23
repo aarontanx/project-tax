@@ -1,9 +1,10 @@
 <template>
         <div> 
+            <h3> Selection </h3>
             <br>
-            <b> Source Country: </b> {{ $store.state.src_cty }}
+            <b> Country </b> 
             <br>
-            <b> Destination Country: </b> {{ $store.state.dst_cty }}
+            {{ $store.state.src_cty }} &rarr; {{ $store.state.dst_cty }}
             <br>
             <b> Category Selected: </b> {{ $store.state.categorySelected }}
             <br>
@@ -30,6 +31,6 @@ export default {
 
 <style scoped>
 h3 {
-    /* margin: x; */
+    margin-bottom: -1%;
 }
 </style>

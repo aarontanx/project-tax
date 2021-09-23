@@ -1,8 +1,8 @@
 <template>
-    <div class='container'>
+    <div class='container center'>
         <div class='center'>
             <p> Source Country: </p>
-            <select class="select-css" v-model="setSrcCty">
+            <select class="select-css " v-model="setSrcCty">
                 <option v-for="src_cty in $store.state.src_cty_choice.sort()" :key='src_cty' :value="src_cty" selected>
                     {{ src_cty }}
                 </option>
@@ -36,7 +36,7 @@
             </select>
         </div>
         <div>
-            <input style="margin: 10px" v-model="setItemValue" type="number" placeholder="Item Value" />
+            <input class='form-size' style="" v-model="setItemValue" type="number" placeholder="Item Value" />
         </div>
     </div>
 </template>
@@ -107,17 +107,33 @@ export default {
         border: 1px black;
     }
 
+.form-size {
+    padding: 12px 20px;
+    margin: 10px auto;
+    /* border-radius: 5%;  */
+    /* display: grid; */
+  grid-template-columns: auto;
+  grid-gap: 0.5rem 1rem;
+  justify-items: center;
+  position: relative;
+}
 
 .select-css {
-  display: block;
+  /* display: grid; */
+  /* display: flex; */
+  align-items: center;    
+  justify-content: center;
   font-size: 16px;
   font-family: sans-serif;
   font-weight: 700;
   color: #444;
   line-height: 1.3;
   padding: .6em 1.4em .5em .8em;
-  width: 100%;
-  max-width: 100%; /* useful when width is set to anything other than 100% */
+  float: center;
+  /* align-items: center; */
+  /* width: 30%; */
+  /* useful when width is set to anything other than 100% */
+  max-width: 100%; 
   box-sizing: border-box;
   margin: 0;
   border: 1px solid #aaa;
@@ -139,6 +155,7 @@ export default {
   /* icon size, then gradient */
   background-size: .65em auto, 100%;
 }
+
 /* Hide arrow icon in IE browsers */
 .select-css::-ms-expand {
   display: none;
