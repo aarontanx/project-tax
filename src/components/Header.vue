@@ -14,6 +14,7 @@ export default {
     @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@1,500&display=swap');
     h1 {
         text-align: left ;
+        margin-left: 2%;
         font-family: 'Ubuntu', sans-serif;
     }
 </style>

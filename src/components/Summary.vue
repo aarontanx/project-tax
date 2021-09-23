@@ -32,5 +32,6 @@ export default {
 <style scoped>
 h3 {
     margin-bottom: -1%;
+    margin-top: -0.7%;
 }
 </style>

@@ -3,7 +3,7 @@
     <div class='result'>
     <Summary />
     <br>
-        <h3> Estimated Cost </h3>
+        <h3 class="line"> Estimated Cost </h3>
         <br>
         <b>SST Value: </b> MYR {{ Number($store.state.LclSSTValue).toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2}) }}
         <br>
@@ -34,33 +34,19 @@ export default {
     overflow: auto;
     min-height: 30px;
     border: 1px solid steelblue;
-    /* padding: 30px; */
+    /* padding-top: -10%; */
+    /* margin-top: -5; */
     border-radius: 30px;
     /* background-color: lightblue; */
     background-color: #ddd; 
     }
 
-/* body {
-    background-color: #ddd;  
-    margin: 3rem;
-    border-radius: 30px;}
-
-#tv {
-  position: relative;
-  width: 350px;
-  height: 550px;
-  background: white;
-  border-radius: 0% 0% 0% 0% / 0% 0% 0% 0% ;
-  color: white;
-  box-shadow: 20px 20px rgba(0,0,0,.15);
-  transition: all .4s ease;
+.line{
+    /* border-top: 3px dotted rgb(0, 0, 0); */
 }
-#tv:hover {
-  border-radius: 0% 0% 50% 50% / 0% 0% 5% 5% ;
-  box-shadow: 10px 10px rgba(0,0,0,.25);
-} */
 
 h3 {
     margin-bottom: -1%;
+    /* margin-top: -5%; */
 }
 </style>
